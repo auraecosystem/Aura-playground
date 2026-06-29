@@ -1,5 +1,4 @@
 // https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html
-
 import type Browser from "webextension-polyfill";
 
 declare namespace Userscripts {
