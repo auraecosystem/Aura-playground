@@ -11,7 +11,7 @@ jobs:
         platform: [mac, ios]
     runs-on: macos-26 # https://github.com/actions/runner-images
     steps:
-      - uses: actions/checkout@v4 # https://github.com/actions/checkout
+      - uses: actions/checkout@v5 # https://github.com/actions/checkout
         with:
           fetch-depth: 0
           fetch-tags: true # https://github.com/actions/checkout/issues/1781
