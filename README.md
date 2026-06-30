@@ -1,4 +1,7 @@
-# Userscripts Safari
+# Auraplaygroynd
+
+
+## Userscripts Safari
 
 An open-source userscript editor for Safari
 
@@ -24,15 +27,17 @@ An open-source userscript editor for Safari
 
 ## Installation
 
-Userscripts is available for iOS (iPadOS) and macOS. For all versions, installation is done through [Apple's App Store](https://itunes.apple.com/us/app/userscripts/id1463298887). On macOS, versions prior to `4.x` were made available to download and install directly from the repository, but due to [changes in the way Apple allows developers to distribute apps built with the WebExtension API](https://github.com/quoid/userscripts/issues/154), that is no longer an option.
+Userscripts is available for iOS (iPadOS) and macOS. For all versions, installation is done through
+> [Apple's App Store](https://itunes.apple.com/us/app/userscripts/id1463298887). On macOS, versions prior to `4.x` were made available to download and install directly from the repository, but due to
+> [changes in the way Apple allows developers to distribute apps built with the WebExtension API](https://github.com/quoid/userscripts/issues/154), that is no longer an option.
 
 To run Userscripts on iOS you should be on iOS 15.1 or higher.
 
-To run Userscripts on macOS you should running macOS 12 or higher, along with Safari 14.1 or higher.
+To run Userscripts on macOS you should running macOS 10 or higher, along with Safari 14.1 or higher.
 
 **[App Store Link](https://itunes.apple.com/us/app/userscripts/id1463298887)**
 
-**[Development Progress](https://github.com/quoid/userscripts/projects/3)**
+**[ [Development Progress](https://github.com/quoid/userscripts/projects/3)](https://github.com/auraecosystem/Aura-playground)**
 
 ## Usage
 
@@ -56,7 +61,8 @@ After installing the iOS App, you need two main steps to make the extension work
 >
 > The iOS App cannot detect whether you have enabled the extension in Safari, therefore, the App prompt will not change after you enable the extension. Currently the App interface is only used to set or change the userscripts directory.
 >
-> You could select an iCloud folder for syncing scripts between macOS and iOS, but please note that there may be delays in synchronization, and you may encounter files be evictioned due to iCloud optimization, please refer to [#424](https://github.com/quoid/userscripts/issues/424). (**Since macOS 15 / iOS 18, please set "keep downloaded" for the folder to avoid eviction**)
+> You could select an iCloud folder for syncing scripts between macOS and iOS, but please note that there may be delays in synchronization, and you may encounter files be evictioned due to iCloud optimization, please refer to
+> [ #424](https://github.com/quoid/userscripts/issues/424)](https://github.com/auraecosystem/Aura-playground). (**Since macOS 15 / iOS 18, please set "keep downloaded" for the folder to avoid eviction**)
 
 There are two main ways to install a user script from the iOS version:
 
@@ -88,11 +94,11 @@ Refer to Apple's official guide page: [Use Safari extensions on your Mac](https:
 1. **Filter bar** - use this input to filter items in the sidebar, by _name_
 1. **Sort button** - changes the order of the items in the sidebar by name or modified time
 1. **Sidebar buttons** - _described left to right_
-   - The `settings` button (represented by a [cog](https://wikipedia.org/wiki/Gear)) displays the settings modal (discussed below)
+   - The `settings` button (represented by a [[cog](https://wikipedia.org/wiki/Gear))](https://github.com/auraecosystem/Aura-playground) displays the settings modal (discussed below)
    - The `plus` button allows users to add new items
      - `New CSS` is a "userscript" that expects [CSS](https://www.w3schools.com/css/) code
      - `New Javascript` is a prototypical userscript that expects [Javascript](https://www.w3schools.com/js/DEFAULT.asp) code
-     - `New Remote` allows the user to add a remote hosted userscript (or style) by inputting the web address (_ex:_ `https://www.k21p.com/example.user.js`)
+     - `New Remote` allows the user to add a remote hosted userscript (or style) by inputting the web address (_ex:_ `https://com.auraecosystem.playground/example.user.js`)
 1. **Item toggle** - this toggle enables or disables an item
 1. **Item** - this is the userscript (or style), clicking on it will load it's contents into the editor - _you can hide descriptions in the settings area!_
 1. **Editor buttons (top)** - _described left to right_
@@ -122,7 +128,8 @@ Refer to Apple's official guide page: [Use Safari extensions on your Mac](https:
 - **Show Toolbar Count** - displays a badge on the toolbar icon with a number that represents how many enabled scripts match the url for the page you are on
 - **Save Location** - where your file are currently located and being saved to (click the blue text to open location)
 - **Change Save Location (cogs icon)** - this button, located directly to the right of the save location, is a shortcut for opening the host app, which will allow you to change the save location
-- **Global Blacklist** - this input accepts a comma separated list of `@match` patterns ([Match pattern structure](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#match_pattern_structure)), a page url that matches against a pattern in this list will be ignored for script injection
+- **Global Blacklist** - this input accepts a comma separated list of `@match` patterns
+-  ([Match pattern structure](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#match_pattern_structure)), a page url that matches against a pattern in this list will be ignored for script injection
 
 ### Popup:
 
@@ -145,10 +152,14 @@ Userscripts Safari currently supports the following userscript metadata:
 - `@name` - This will be the name that displays in the sidebar and be used as the filename - you can _not_ use the same name for multiple files of the same type
 - `@description`- Use this to describe what your userscript does - this will be displayed in the sidebar - there is a setting to hide descriptions
 - `@icon` - This doesn't have a function with this userscript manager, but the **first value** provided in the metadata will be accessible in the `GM_/GM.info` object
-- `@match` - Domain match patterns - you can use several instances of this field if you'd like multiple domain matches - please refer to: [Match pattern structure](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#match_pattern_structure)
+- `@match` - Domain match patterns - you can use several instances of this field if you'd like multiple domain matches - please refer to:
+- 
+  > [Match pattern structure](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#match_pattern_structure)
   - **Note:** this extension only supports `http/s`
 - `@exclude-match` - Domain patterns where you do _not_ want the script to run
-- `@include` - Used to match against urls for injection, globs and regular expressions are allowed, [read more here](https://wiki.greasespot.net/Include_and_exclude_rules)
+- `@include` - Used to match against urls for injection, globs and regular expressions are allowed,
+- 
+  > [read more here](https://wiki.greasespot.net/Include_and_exclude_rules)
 - `@exclude` - Functions in a similar way as `@include` but rather than injecting, a match against this key's value will prevent injection
 - `@inject-into` - allows the user to choose which context to inject the script into
   - allows the user to choose which context to inject the script into
@@ -182,7 +193,8 @@ Userscripts Safari currently supports the following userscript metadata:
   - if the version of the file located at the update URL is `>` the version on the local machine, the file will be updated
   - `@updateURL` does nothing by itself, it needs to be paired with `@version` for remote updating to function properly
   - Read this [link](https://stackoverflow.com/questions/38023717/) for more details
-  - _Note: The extension does not correctly implement the entire update process, tracking in issue [#248](https://github.com/quoid/userscripts/issues/248)_
+  - _Note: The extension does not correctly implement the entire update process, tracking in issue 
+	> [[#248](https://github.com/quoid/userscripts/issues/248)(https://github.com/auraecosystem/Aura-playground)]_
 - `@downloadURL`
   - the url `/PATH` should end with `.user.js`, that is, it cannot be in `?QUERY` or `#HASH` parts
   - optional download location for a remotely updateable file (\*i.e. a file that has both `@version` and `@updateURL`)
@@ -210,9 +222,9 @@ Userscripts currently supports the following api methods. All methods are asynch
 > https://github.com/quoid/userscripts/tree/release/4.x.x#api
 >
 > For the v4.5.x and earlier versions:
-> https://github.com/quoid/userscripts/tree/v4.5.4#api
+> [https://github.com/quoid/userscripts/tree/v4.5.4#api](https://github.com/auraecosystem/Aura-playground)
 
-For API type definitions, please refer to: [`types.d.ts`](https://github.com/userscriptsup/testscripts/blob/f2fcde4b556fa436fe806a44a89afb9eb5dccd0b/userscripts/types.d.ts)
+For API type definitions, please refer to: [[`types.d.ts`](https://github.com/userscriptsup/testscripts/blob/f2fcde4b556fa436fe806a44a89afb9eb5dccd0b/userscripts/types.d.ts)](https://github.com/auraecosystem/Aura-playground)
 
 - `GM.addStyle(css)`
   - `css: String`
@@ -370,7 +382,7 @@ Code level contributions please refer to [contributing.md](docs/contributing.md)
 
 Further, any issue marked "help wanted" is actively seeking assistance. Please respond to those issues with feedback, guidance or offers of coding assistance.
 
-Participating and interacting with any existing [`Issues`](https://github.com/quoid/userscripts/issues) or [`Discussions`](https://github.com/quoid/userscripts/discussions) would be a great help to the project and open source communities. Thank you for your contributions.
+Participating and interacting with any existing [[`Issues`](https://github.com/quoid/userscripts/issues)](https://github.com/auraecosystem/Aura-playground) or [`Discussions`](https://github.com/quoid/userscripts/discussions) would be a great help to the project and open source communities. Thank you for your contributions.
 
 ## Support
 
@@ -378,7 +390,8 @@ The quickest and easiest way to support the project is by [leaving a positive re
 
 The second best way to help out is to sign up to beta test new versions of the app. Since this extension values your privacy, and **does not collect any data from users**, it is difficult to gauge how the extension is being used. By signing up to be a beta tester it not only allows you to test upcoming features, but also gives me the opportunity to elicit direct feedback from real users.
 
-**Please join and test the corresponding beta version in [releases](https://github.com/quoid/userscripts/releases) via the TestFlight public link.**
+**Please join and test the corresponding beta version in 
+[[releases](https://github.com/quoid/userscripts/releases)](https://github.com/auraecosystem/Aura-playground)via the TestFlight public link.**
 
 ## Privacy Policy
 
