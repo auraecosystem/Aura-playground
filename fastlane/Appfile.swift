@@ -1,5 +1,5 @@
 # For more information about the Appfile, see:
 # https://docs.fastlane.tools/advanced/#appfile
 
-app_identifier("com.userscripts.macos")
+app_identifier("com.auraecosystem.macos")
 
