@@ -1,0 +1,28 @@
+:root {
+  --bg: #0B0F19;
+  --surface: rgba(255,255,255,.08);
+  --border: rgba(255,255,255,.18);
+  --text: #fff;
+  --text-secondary: #d1d5db;
+  --primary: #4F46E5;
+  --secondary: #06B6D4;
+  --radius: 20px;
+  --blur: 28px;
+  --transition: .25s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 20%, #4F46E5 0%, transparent 35%),
+    radial-gradient(circle at 80% 70%, #06B6D4 0%, transparent 40%),
+    linear-gradient(180deg, #090A11, #0F172A);
+  min-height: 100vh;
+}
