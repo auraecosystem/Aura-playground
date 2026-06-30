@@ -1,0 +1,14 @@
+# fastlane/Appfile
+# Aura Playground
+
+# Default bundle identifier (can be overridden by lanes)
+app_identifier(ENV.fetch("FL_APP_IDENTIFIER", "com.auraecosystem.playground"))
+
+# Apple Developer Account
+apple_id(ENV["APPLE_ID"]) if ENV["APPLE_ID"]
+
+# Apple Developer Team
+team_id(ENV["APPLE_TEAM_ID"]) if ENV["APPLE_TEAM_ID"]
+
+# App Store Connect Team
+itc_team_id(ENV["APPSTORE_TEAM_ID"]) if ENV["APPSTORE_TEAM_ID"]
